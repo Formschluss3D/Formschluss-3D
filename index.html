@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FORMSCHLUSS 3D – 3D-Druck aus Haren (Ems)</title>
-<meta name="description" content="Einzelteile, Ersatzteile und Muster im 3D-Druck, vom Feinwerkmechaniker. Präzision, Schicht für Schicht. Haren (Ems).">
+<meta name="description" content="Einzelteile, Ersatzteile, Muster und Deko im 3D-Druck, vom Feinwerkmechaniker. Präzision, Schicht für Schicht. Haren (Ems).">
 <style>html,body{margin:0}</style>
 </head>
 <body>
@@ -32,7 +32,7 @@
 .fs .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--ln);background:var(--sf)}
 .fs .g2 article{padding:24px 26px;border-bottom:1px solid var(--ln)}
 .fs .g2 article:nth-child(odd){border-right:1px solid var(--ln)}
-.fs .g2 article:nth-last-child(-n+2){border-bottom:0}
+.fs .g2 article:last-child{border-bottom:0;grid-column:1/-1;border-right:0}
 .fs .g2 h3{font-size:26px;margin-bottom:6px}
 .fs .g2 p{color:var(--mu)}
 .fs table{width:100%;border-collapse:collapse}
@@ -45,10 +45,11 @@
 .fs ol li:before{content:counter(s);display:block;font-size:50px;font-weight:700;line-height:1;color:var(--ac);margin-bottom:6px}
 .fs ol h3{font-size:23px;margin-bottom:6px}
 .fs ol p{color:var(--mu);font-size:16px}
-.fs .mu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.fs .mu div{border:1px solid var(--ln);background:var(--sf);padding:20px}
-.fs .mu h3{font-size:22px;margin-bottom:6px}
-.fs .mu p{color:var(--mu);font-size:16px}
+.fs .mu{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:760px}
+.fs .mu div{border:1px solid var(--ln);background:var(--sf);padding:20px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:0 24px;align-items:center}
+.fs .mu h3{font-size:22px;margin-bottom:6px;align-self:end}
+.fs .mu p{color:var(--mu);font-size:16px;align-self:start}
+.fs .mu img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;margin:0;grid-row:1/3;border:1px solid var(--ln)}
 .fs details{border-bottom:1px solid var(--ln);padding:14px 0}
 .fs details:first-of-type{border-top:1px solid var(--ln)}
 .fs summary{cursor:pointer;font-weight:700;font-size:18px}
@@ -58,7 +59,7 @@
 .fs .box{border:1px solid var(--ln);background:var(--sf);padding:22px}
 .fs .box p{margin-bottom:4px}
 .fs .imp{background:#fff;font-size:15px;color:var(--mu)}
-@media(max-width:800px){.fs .g2,.fs .mu,.fs .ct{grid-template-columns:1fr}.fs .g2 article:nth-child(odd){border-right:0}.fs .g2 article:nth-last-child(2){border-bottom:1px solid var(--ln)}.fs ol{grid-template-columns:1fr 1fr}.fs section{padding:48px 0}}
+@media(max-width:800px){.fs .g2,.fs .ct{grid-template-columns:1fr}.fs .mu div{grid-template-columns:1fr}.fs .mu img{grid-row:auto;margin-bottom:14px}.fs .g2 article:nth-child(odd){border-right:0}.fs ol{grid-template-columns:1fr 1fr}.fs section{padding:48px 0}}
 @media(max-width:480px){.fs ol{grid-template-columns:1fr}}
 </style>
 <div class="fs">
@@ -66,9 +67,9 @@
  <div class="brand">FORMSCHLUSS<b>3D</b></div>
  <div class="eb" style="color:var(--ha)">Präzision, Schicht für Schicht</div>
  <h1>3D-Druck für Teile, <em>die passen müssen.</em></h1>
- <p class="l">Ersatzteile, Einzelstücke und Prototypen aus technischen Kunststoffen. Konstruiert und gedruckt in Haren (Ems) von einem Feinwerkmechaniker.</p>
+ <p class="l">Ersatzteile, Prototypen, Einzelstücke und Deko aus technischen Kunststoffen. Konstruiert und gedruckt in Haren (Ems) von einem Feinwerkmechaniker.</p>
  <a class="btn" href="#fs-kontakt">Anfrage stellen</a>
- <div class="facts">CAD-Konstruktion · Prototypen · Ersatzteile · Einzelstücke</div>
+ <div class="facts">CAD-Konstruktion · Prototypen · Ersatzteile · Einzelstücke · Deko</div>
 </div></div>
 
 <section id="fs-leistungen"><div class="w">
@@ -79,6 +80,7 @@
   <article><h3>CAD-Konstruktion</h3><p>Aus deiner Idee wird ein druckgerechtes 3D-Modell, passend zu Einsatz und Druckverfahren.</p></article>
   <article><h3>Prototypen und Funktionsmuster</h3><p>Ein Teil, das du einbauen und prüfen kannst, bevor du in Werkzeuge oder eine größere Stückzahl investierst.</p></article>
   <article><h3>Einzelstücke und Kleinserien</h3><p>Vom Einzelteil bis zu kleinen Stückzahlen. Ich halte die Druckeinstellungen fest, damit Nachbestellungen so ausfallen wie das erste Teil.</p></article>
+  <article><h3>Deko und Geschenke</h3><p>Personalisierte Einzelstücke mit Name oder Motiv, auch mehrfarbig gedruckt, zum Beispiel als Geschenk, Dekoration oder Erinnerungsstück.</p></article>
  </div>
 </div></section>
 
@@ -108,15 +110,13 @@
  <div class="eb">Muster</div><h2>Teile zum Anfassen.</h2>
  <p class="lead">Bei einem Termin bringe ich Musterteile mit, damit du Gewicht, Oberfläche und Steifigkeit selbst beurteilen kannst.</p>
  <div class="mu">
-  <div><h3>Planetengetriebe</h3><p>Eigenes Design, Pfeilverzahnung. Zeigt, wie genau sich bewegliche Teile drucken lassen.</p></div>
-  <div><h3>Dart-Zähler mit Name</h3><p>Personalisiert, mehrfarbig gedruckt.</p></div>
-  <div><h3>Halter in Serie</h3><p>Gleiche Teile in einem Druck, so bekommst du Nachbestellungen im gleichen Maß.</p></div>
+  <div><img src="bilder/planetengetriebe.jpg" alt="Mehrfarbig gedrucktes Planetengetriebe mit beweglichen Zahnrädern und der Aufschrift Formschluss 3D, Präzision Schicht für Schicht, in Schwarz, Rot und Weiß" width="800" height="800" loading="lazy"><h3>Planetengetriebe</h3><p>Eigenes Design mit beweglichen Zahnrädern, mehrfarbig gedruckt und mit Name personalisierbar. Zeigt, wie genau sich bewegliche Teile drucken lassen.</p></div>
  </div>
  </div></section>
 
 <section id="fs-ueber"><div class="w">
  <div class="eb">Über mich</div><h2>Hallo, ich bin Markus Wolters.</h2>
- <p class="lead" style="margin-bottom:14px">Ich bin Feinwerkmechaniker und arbeite an einer CNC-Fräsmaschine. Dort bearbeite ich Metall ebenso wie glasfaserverstärkte Kunststoffe. Deshalb weiß ich, worauf es bei Maßen und Toleranzen ankommt.</p>
+ <p class="lead" style="margin-bottom:14px">Ich bin Feinwerkmechaniker und arbeite an einer CNC-Fräsmaschine. Früher habe ich Metall bearbeitet, heute bearbeite ich glasfaserverstärkte Kunststoffe (GFK). Deshalb weiß ich, worauf es bei Maßen und Toleranzen ankommt.</p>
  <p class="lead" style="margin-bottom:14px">Formschluss 3D baue ich neben meinem Hauptberuf in Haren (Ems) auf, weil ich 3D-Druck spannend finde und mein Wissen aus der Fertigung gern auf gedruckte Teile übertrage.</p>
  <p class="lead">Mir ist wichtig, dass ein Teil nicht nur gut aussieht, sondern im Einsatz passt. Deshalb frage ich vorher, wofür du es brauchst, und sage dir ehrlich, was sich drucken lässt und was nicht. Da ich allein arbeite, bin ich nicht immer sofort erreichbar. Termine sprechen wir vorab ab. Du sprichst von der Anfrage bis zur Übergabe immer direkt mit mir.</p>
 </div></section>
@@ -127,8 +127,8 @@
  <details><summary>Wie lange dauert es?</summary><p>Das hängt von Größe, Menge und meiner Auslastung ab. Nach deiner Anfrage nenne ich dir einen konkreten Termin.</p></details>
  <details><summary>Was kostet das?</summary><p>Der Preis richtet sich nach Material, Druckzeit, Nachbearbeitung und Menge. Schick mir deine Anfrage, dann bekommst du ein Angebot.</p></details>
  <details><summary>Wie genau sind die Teile?</summary><p>Die erreichbare Genauigkeit hängt von Form, Material und Druckrichtung ab. Bei passungskritischen Maßen sprechen wir vorher darüber, und ich teste das Spiel am Muster, bevor ich dir etwas zusage.</p></details>
- <details><summary>Eignen sich die Teile für jeden Einsatz?</summary><p>Nein. Bei druckführenden oder sicherheitsrelevanten Teilen mache ich keine Zusage. Sag mir kurz, wofür du das Teil brauchst, dann sage ich dir ehrlich, ob es geht.</p></details>
- <details><summary>Lieferst du auch außerhalb von Haren?</summary><p>Abholung in Haren (Ems) ist möglich. Versand klären wir nach Absprache.</p></details>
+ <details><summary>Eignen sich die Teile für meinen Einsatz?</summary><p>In den meisten Fällen ja: für Ersatzteile, Halter, Gehäuse, Vorrichtungen und Muster. Bei druckführenden oder sicherheitsrelevanten Teilen gebe ich keine Zusage. Sag mir kurz, wofür du das Teil brauchst, dann sage ich dir ehrlich, ob es geht und welches Material passt.</p></details>
+ <details><summary>Wie kommt das Teil zu mir?</summary><p>Du holst das Teil in Haren (Ems) ab. Wenn du nicht vorbeikommen kannst, ist Versand auf Anfrage möglich. Die Kosten dafür klären wir vorher.</p></details>
 </div></section>
 
 <section id="fs-kontakt"><div class="w">
